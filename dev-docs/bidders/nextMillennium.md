@@ -5,10 +5,10 @@ description: NextMillennium bid adapter
 gvl_id: dev-docs/bidders/nextMillennium.md
 tcfeu_supported: true
 usp_supported: true
-coppa_supported: false
-schain_supported: false
+coppa_supported: true
+schain_supported: true
 dchain_supported: false
-safeframes_ok: false
+safeframes_ok: true
 deals_supported: false
 floors_supported: false
 fpd_supported: false
@@ -26,7 +26,7 @@ sidebarType: 1
 {: .table .table-bordered .table-striped }
 | Name           | Scope | Description                              | Example   | Type    |
 |----------------+-------+-----------------------------------+-----------+---------|
-| `placement_id` | required | Placement ID, provided by nextMillennium | `'12345'` | String  |
+| `placement_id` | optional | Placement ID, provided by nextMillennium | `'12345'` | String  |
 | `group_id`     | optional | Group ID, provided by nextMillennium     | `'12345'` | String  |
 
 Required one of the two parameters placement_id or group_id.
@@ -72,10 +72,14 @@ The adapter for Prebid.js supports the following options:
 * `site.pagecat`
 * `site.content.cat`
 * `site.content.language`
-* `device.sua'`
-* `site.keywords'`
-* `site.content.keywords'`
-* `user.keywords'`
+* `device.sua`
+* `site.keywords`
+* `site.content.keywords`
+* `user.keywords`
+* `bcat`
+* `badv`
+* `wlang`
+* `wlangb`
 
 You can set these parameters through the Prebid.js configuration setup functions: [pbjs.setConfig](https://docs.prebid.org/dev-docs/publisher-api-reference/setConfig.html) or [pbjs.setBidderConfig](https://docs.prebid.org/dev-docs/publisher-api-reference/setBidderConfig.html).
 An example of setting openrtb parameters for the entire prebid.js script.
